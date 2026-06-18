@@ -85,7 +85,7 @@ int read_map(FILE *fp, t_map *map)
         if (j != map->cols)
             return 0;
         map->grid[i] = malloc(j + 1);
-        for (int j = 0; j < line[j] && line[j] != '\n'; j++)
+        for (int j = 0; line[j] && line[j] != '\n'; j++)
         {
             if (!valid_char(map, line[j]))
                 return 0;
